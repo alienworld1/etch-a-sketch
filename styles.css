@@ -4,3 +4,12 @@
     height: 100px;
     width: 100px;
 }
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+#square-grid {
+    display: flex;
+}
