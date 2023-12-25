@@ -1,6 +1,9 @@
 const startSize = 16;
+const minSize = 1;
+const maxSize = 100;
 
 squareGrid = document.querySelector("#square-grid");
+newGridButton = document.querySelector("#create-button");
 
 function paintSquare(event) {
     event.currentTarget.classList.toggle("black-background");
@@ -23,4 +26,16 @@ function drawGrid(sideLength) {
     }
 }
 
+function clearGrid() {
+    squareGrid.innerHTML = "";
+}
+
+function createNewGrid() {
+    gridSize = +prompt("Enter the grid size:");
+
+    clearGrid();
+    drawGrid(gridSize);
+} 
+
 drawGrid(startSize);
+newGridButton.addEventListener("click", createNewGrid);
