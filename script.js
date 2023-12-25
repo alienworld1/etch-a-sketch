@@ -33,6 +33,16 @@ function clearGrid() {
 function createNewGrid() {
     gridSize = +prompt("Enter the grid size:");
 
+    if (isNaN(gridSize)) {
+        alert("Please enter a valid number.");
+        return;
+    }
+
+    if (gridSize < minSize || gridSize > maxSize) {
+        alert("The number must be within 1 to 100");
+        return;
+    }
+
     clearGrid();
     drawGrid(gridSize);
 } 
