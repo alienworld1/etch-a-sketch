@@ -1,15 +1,14 @@
 .square {
     box-sizing: border-box;
     border: 1px solid black;
-    height: 100px;
-    width: 100px;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
+    height: 6.25%;
+    width: 6.25%;
+    flex: 1 0 auto;
 }
 
 #square-grid {
     display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vh;
 }
