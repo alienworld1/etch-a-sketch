@@ -2,6 +2,10 @@ const startSize = 16;
 
 squareGrid = document.querySelector("#square-grid");
 
+function paintSquare(event) {
+    event.currentTarget.classList.toggle("black-background");
+}
+
 function drawGrid(sideLength) {
 
     squareDimensions = `${100/sideLength}%`
@@ -12,6 +16,8 @@ function drawGrid(sideLength) {
         
         square.style.width = squareDimensions;
         square.style.height = squareDimensions;
+
+        square.addEventListener("mouseover", paintSquare);
 
         squareGrid.appendChild(square);
     }
