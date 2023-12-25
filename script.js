@@ -6,7 +6,7 @@ squareGrid = document.querySelector("#square-grid");
 newGridButton = document.querySelector("#create-button");
 
 function paintSquare(event) {
-    event.currentTarget.classList.toggle("black-background");
+    event.currentTarget.style.backgroundColor = getRandomColor();
 }
 
 function drawGrid(sideLength) {
@@ -28,6 +28,14 @@ function drawGrid(sideLength) {
 
 function clearGrid() {
     squareGrid.innerHTML = "";
+}
+
+function getRandomColor() {
+    red = Math.floor(Math.random() * 255);
+    green = Math.floor(Math.random() * 255);
+    blue = Math.floor(Math.random() * 255);
+
+    return `rgb(${red}, ${green}, ${blue})`;
 }
 
 function createNewGrid() {
