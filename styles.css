@@ -10,10 +10,20 @@
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    height: 100vh;
-    width: 100vh;
+    height: 90vh;
+    width: 90vh;
 }
 
 .black-background {
     background-color: black;
+}
+
+#create-button {
+    margin: 0.5em auto;
+    padding: 16px;
+    border: 0;
+    background-color: cornflowerblue;
+    border-radius: 15px;
+    display: block;
+    font-size: large;
 }
